@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GuessTheNumber.CpuPage"
+             NavigationPage.HasNavigationBar="false"
+             BackgroundColor="#fff"
+             >
+    <ContentPage.Content>
+        <Grid Padding="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+
+            <Label x:Name="Label1"
+                TextColor="#0a5688" FontSize="24"
+                Padding="5" HorizontalOptions="Center"
+                Grid.ColumnSpan="2"
+            />
+
+            <Label x:Name="guess"
+                TextColor="#0a5688" FontSize="24"
+                Padding="5" HorizontalOptions="Center"
+                Grid.ColumnSpan="2" Grid.Row="1"
+            />
+
+            <Label 
+                Text="Exists" TextColor="#0a5688" FontSize="24"
+                Grid.Row="2" Grid.Column="0"
+                HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+            />
+
+            <Label 
+                Text="On Place" TextColor="#0a5688" FontSize="24"
+                Grid.Row="2" Grid.Column="1"
+                HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+            />
+
+            <Entry x:Name="Exists"
+                Grid.Row="3" Grid.Column="0"
+                Keyboard="Numeric" MaxLength="4"
+                BackgroundColor="white" Opacity="0.7"
+                Placeholder="Enter the number." PlaceholderColor="black"
+            />
+
+            <Entry x:Name="OnPlace"
+                Grid.Row="3" Grid.Column="1"
+                Keyboard="Numeric" MaxLength="4"
+                BackgroundColor="white" Opacity="0.7"
+                Placeholder="Enter the number." PlaceholderColor="black"
+            />
+
+            <Button x:Name="answer"
+                Text="Check" FontSize="24"
+                BackgroundColor="#0a5688" TextColor="#f9d162"
+                WidthRequest="200" HorizontalOptions="Center"
+                CornerRadius="10"
+                Clicked="Answer"
+                Grid.Row="4" Grid.ColumnSpan="2"
+            />
+
+            <Label x:Name="Num_List"
+                TextColor="#0a5688" FontSize="24"
+                HorizontalTextAlignment="Center"
+                Grid.Row="5" Grid.ColumnSpan="2"
+            />
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
